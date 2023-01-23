@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Litres de pintura necessaris</title>
+</head>
+
+<body>
+    <header>
+        <h1>Litres de pintura necessaris</h1>
+    </header>
+
+    <main>
+        <p>Indiqui a continuació les mides de la paret a pintar i les capes de pintura que desitja realitzar.</p>
+
+        <input type="text" id="wallWidth" placeholder="Amplada de la paret">
+        <input type="text" id="wallHeight" placeholder="Alçada de la paret">
+        <input type="text" id="paintLayers" placeholder="Capes de pintura">
+
+        <button onclick="calculate()">Calcular</button>
+
+        <p id="result"></p>
+    </main>
+</body>
+
+<script src="index.js"></script>
+
+</html>
