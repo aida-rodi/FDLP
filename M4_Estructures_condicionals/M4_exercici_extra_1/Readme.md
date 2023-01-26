@@ -17,10 +17,3 @@ JAVASCRIPT
 
 1. Crear una función *calculate()* 
 
-2. Crear una variable *const day = Number(document.getElementById("userDay").value)* para guardar el día introducido por el usuario 
-
-3. Crear una variable *const month = String(document.getElementById("userMonth").value).toLowerCase()* para guardar el mes introducido por el usuario y transformar el String a Lowercase 
-
-4. Crear un *switch (month)* con 13 cases, uno para cada mes y un default 
-
-5. Usar *if else* para que salga el signo del zodíaco correcto según el día del mes introducido por el usuario 

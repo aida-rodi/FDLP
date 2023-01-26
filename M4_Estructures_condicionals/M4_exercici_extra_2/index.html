@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Traductor de números</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Traductor de números</h1>
+    </header>
+
+    <main>
+        <p>Introdueix un número entre el 0 i el 99 per veure com s'escriu en lletres.</p>
+        <input type="number" id="userNumber" placeholder="Introdueix un número">
+        <button onclick="translateNumber()">Traduir</button>
+        <p id="translation"></p>
+    </main>
 </body>
+
 <script src="index.js"></script>
 </html>
