@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Mostrar dades</title>
+    <title>Calcula la mitja de tres notes i indica si has aprovat o suspès</title>
 </head>
 
 <body>
     <header>
-        <h1>Mostrar Dades</h1>
+        <h1>Calcula la mitja de tres notes i indica si has aprovat o suspès</h1>
     </header>
     
     <main>
-        <p id="show-data"></p>
+        <h3>Introdueix 3 notes</h3>
+        <input type="number" placeholder="Primera nota" id="firstNum">
+        <input type="number" placeholder="Segona nota" id="secondNum">
+        <input type="number" placeholder="Tercera nota" id="thirdNum">
+        <br>
+        <br>
+        <button onclick="calculate()">Enviar</button>
+        <br>
+        <p id="result"></p>
     </main>
 </body>
 
