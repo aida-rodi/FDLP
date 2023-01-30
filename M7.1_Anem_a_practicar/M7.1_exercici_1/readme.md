@@ -15,21 +15,20 @@ HTML
 
 JAVASCRIPT
 
-1. Crear una variable *const firstUserNum = Number(document.getElementById("firstNum").value)* para tranformar el primer *input="text"* a *Number* y almacenarlo 
+1. Crear una función *calculate()*
 
-2. Crear una variable *const secondUserNum = Number(document.getElementById("secondNum").value)* para tranformar el segundo *input="text"* a *Number* y almacenarlo 
+2. Crear una variable *const firstUserNum = Number(document.getElementById("firstNum").value)* para tranformar el primer *input="text"* a *Number* y almacenarlo 
 
-3. Crear una variable *const thirdUserNum = Number(document.getElementById("thirdNum").value)* para tranformar el tercer *input="text"* a *Number* y almacenarlo 
+3. Crear una variable *const secondUserNum = Number(document.getElementById("secondNum").value)* para tranformar el segundo *input="text"* a *Number* y almacenarlo 
 
-4. Crear una variable *const average = (firstUserNum + secondUserNum + thirdUserNum) / 3* 
+4. Crear una variable *const thirdUserNum = Number(document.getElementById("thirdNum").value)* para tranformar el tercer *input="text"* a *Number* y almacenarlo 
 
-5. Crear una función *calculate()* que imprima mediante *document.getElementById("result").innerHTML = "La mitjana de les tres notes introduides és " + average
+5. Crear una variable *const average = (firstUserNum + secondUserNum + thirdUserNum) / 3* 
 
+6. Mediante *if* hacer que el programa imprima un mensaje diferente para cada rando de notas.
 
-Crea un programa on l’usuari/ària introdueix tres notes i el programa calculi la mitja. 
+7. Si la media es inferior a 5 mostrar el siguiente mensaje: “No has superat el curs. Has de recuperar”.
 
-Si la mitja és inferior a 5 ha de mostrar el següent missatge per pantalla: “No has superat el curs. Has de recuperar”.
+8. Si la media está entre 5 i 7 mostrar: “Enhorabona! Has aprovat, però hauries de continuar practicant”.
 
-Si la mitja està entre 5 i 7 ha de mostrar: “Enhorabona! Has aprovat, però hauries de continuar practicant”.
-
-Si la mitja és superior a 7 ha de mostrar: "Enhorabona! Has superat el curs! Passa ja al següent nivell!"
+9. Si la media es superior a 7 mostrar: "Enhorabona! Has superat el curs! Passa ja al següent nivell!"
