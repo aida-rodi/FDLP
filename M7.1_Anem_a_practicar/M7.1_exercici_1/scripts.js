@@ -7,7 +7,7 @@ function calculate() {
 
   if (average < 0 || average > 10) {
     alert("Has introduït una nota incorrecta.");
-    throw Error("L'usuari ha introduït una nota incorrecte.");
+    throw Error("L'usuari ha introduït una nota incorrecta.");
   }
 
   if (average < 5) {

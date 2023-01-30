@@ -1,15 +1,10 @@
-function double() {
-    const userNum = Number(document.getElementById("number").value)
+function checkNumbers() {
+    const firstNum = Number(document.getElementById("firstUserNumber").value);
+    const secondNum = Number(document.getElementById("secondUserNumber").value);
 
-    const double = userNum * 2
-
-    document.getElementById("result").innerHTML = `${userNum} x 2 = ${double}`
-}
-
-function triple() {
-    const userNum = Number(document.getElementById("number").value)
-
-    const triple = userNum * 3
-
-    document.getElementById("result").innerHTML = `${userNum} x 3 = ${triple}`
+    if (Math.sign(firstNum) === -1 && Math.sign(secondNum) === 1 || Math.sign(firstNum) === 1 && Math.sign(secondNum) === -1) {
+        document.getElementById("result").innerHTML = "Uno de los dos números es negativo."
+    } else {
+        document.getElementById("result").innerHTML = ""
+    }
 }

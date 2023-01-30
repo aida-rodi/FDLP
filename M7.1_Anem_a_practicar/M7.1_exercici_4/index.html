@@ -5,29 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calcula el doble i el triple</title>
+    <title>M7.1_exercici_4</title>
 </head>
 
 <body>
-    <header>
-        <h1>Calcula el doble i el triple</h1>
-    </header>
-
-    <main>
-        <p>De quin número vols saber-ne el doble i el triple?</p>
-
-        <input type="text" id="number" placeholder="Escriu un número">
-        <br>
-        <div class="buttons">
-            <button onclick="double()" class="button">x2</button>
-            <button onclick="triple()" class="button">x3</button>
-        </div>
-    
-        <p id="result"></p>
-    </main>
-
+    <h1>Indica si uno de los números es negativo</h1>
+    <h3>Introduce dos números, por favor</h3>
+    <input type="text" id="firstUserNumber" placeholder="Escribe un número">
+    <input type="text" id="secondUserNumber" placeholder="Escribe un número">
+    <button onclick="checkNumbers()">Comprobar</button>
+    <br>
+    <p id="result"></p>
 </body>
 
-<script src="index.js"></script>
-
+<script src="index.js"></script> 
 </html>

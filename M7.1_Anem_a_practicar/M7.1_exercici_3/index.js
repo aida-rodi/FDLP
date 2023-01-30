@@ -1,9 +1,15 @@
 function calculate() {
-    const firstUserNum = Number(document.getElementById("firstNum").value)
-    const secondUserNum = Number(document.getElementById("secondNum").value)
-    const thirdUserNum = Number(document.getElementById("thirdNum").value)
-
-    const average = (firstUserNum + secondUserNum + thirdUserNum) / 3
-
-    document.getElementById("result").innerHTML = "La mitjana de les tres notes introduïdes és " + average
+  const userNumber = Number(document.getElementById("userNumber").value);
+  const isEven = userNumber % 2 === 0;
+  const isOdd = userNumber % 2 !== 0;
+  if (isEven) {
+    document.getElementById(
+      "result"
+    ).innerHTML = `El numero ${userNumber} es par.`;
+  }
+  if (isOdd) {
+    document.getElementById(
+      "result"
+    ).innerHTML = `El numero ${userNumber} es impar.`;
+  }
 }

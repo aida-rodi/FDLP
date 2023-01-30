@@ -5,13 +5,3 @@ html {
 body {
     text-align: center;
 }
-
-.buttons {
-    margin-top: 1em;
-}
-
-.button {
-    padding: 0.5em 2.4em;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-}
