@@ -40,5 +40,3 @@ const userNumber
 comprobar si userNumber esta entre 1 y 3, si no mensage «Entiendo que no quieres jugar. Adiós»
 si el numero esta entre 1 y 3 buscamos en las combinaciones
 mostramos resultado si gana el usuario o si es la maquina, o sea empate
-
-
