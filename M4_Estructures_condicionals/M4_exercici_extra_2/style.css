@@ -5,3 +5,7 @@ html {
 body {
   text-align: center;
 }
+
+#translation:first-letter {
+  text-transform: capitalize;
+}

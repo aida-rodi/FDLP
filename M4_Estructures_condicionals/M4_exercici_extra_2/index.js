@@ -1,54 +1,25 @@
+const numberDictionary = {
+  0:"zero", 1:"u", 2:"dos", 3:"tres", 4:"quatre", 5:"cinc", 6:"sis", 7:"set", 8:"vuit", 9:"nou",
+  10:"deu", 11:"onze", 12:"dotze", 13:"tretze", 14:"catorze", 15:"quinze", 16:"setze", 17:"disset", 18:"divuit", 19:"dinou",
+  20:"vint", 30:"trenta", 40:"quaranta", 50:"cinquanta", 60:"seixanta", 70:"setanta", 80:"vuitanta", 90:"noranta"
+}
+
 function translateNumber() {
-  const userNumber = Number(document.getElementById("userNumber").value);
+  const userNumber = (document.getElementById("userNumber").value)
 
-  switch (userNumber) {
-    case 0:
-      document.getElementById("translation").innerHTML = "Zero";
-      break;
+  let numberInNumberDictionary = numberDictionary[userNumber]
 
-    case 1:
-      document.getElementById("translation").innerHTML = "U";
-      break;
-
-    case 2:
-      document.getElementById("translation").innerHTML = "Dos";
-      break;
-
-    case 3:
-      document.getElementById("translation").innerHTML = "Tres";
-      break;
-
-    case 4:
-      document.getElementById("translation").innerHTML = "Quatre";
-      break;
-
-    case 5:
-      document.getElementById("translation").innerHTML = "Cinc";
-      break;
-
-    case 6:
-      document.getElementById("translation").innerHTML = "Sis";
-      break;
-
-    case 7:
-      document.getElementById("translation").innerHTML = "Set";
-      break;
-
-    case 8:
-      document.getElementById("translation").innerHTML = "Vuit";
-      break;
-
-    case 9:
-      document.getElementById("translation").innerHTML = "Nou";
-      break;
-
-    case 10:
-      document.getElementById("translation").innerHTML = "Deu";
-      break;
-
-    default:
-      document.getElementById("translation").innerHTML =
-        "Introdueix un número entre el 0 i el 99.";
-      break;
+  if (!numberInNumberDictionary && userNumber[0] !== "2") {
+    const userNumberTen = userNumber[0] + "0"
+    const userNumberUnit = userNumber[1]
+    numberInNumberDictionary = `${numberDictionary[userNumberTen]}-${numberDictionary[userNumberUnit]}`
   }
+
+  if (!numberInNumberDictionary && userNumber[0] === "2") {
+    const userNumberTen = userNumber[0] + "0"
+    const userNumberUnit = userNumber[1]
+    numberInNumberDictionary = `${numberDictionary[userNumberTen]}-i-${numberDictionary[userNumberUnit]}`
+  }
+
+  document.getElementById("translation").innerHTML = numberInNumberDictionary
 }
