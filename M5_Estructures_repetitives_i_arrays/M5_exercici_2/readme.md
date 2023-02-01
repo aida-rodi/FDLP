@@ -1,14 +1,5 @@
-Descripción
-El programa pide dos números enteros y entonces calcula la suma de los valores comprendidos entre ambos números, incluidos. 
+# Suma dels valors entre dos nombres
 
-Ejemplo: 4 y 6 --> resultado = 4 + 5 + 6 = 15
+El programa demana dos nombres enters i llavors calcula la suma dels valors compresos entre els dos números, inclosos. 
 
-
--buscamos un numero pequeño y  un numero grande de dos inputs
-
--num1
--num2
-
-
-
-declaramos un array 
+Exemple: 4 i 6  --> resultat = 4 + 5 + 6 = 15
