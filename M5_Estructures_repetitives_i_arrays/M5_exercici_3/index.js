@@ -10,5 +10,4 @@ function guessNumber() {
     if (userNumber === randomNumber) {
         document.getElementById("result").innerHTML = `Enhorabona, el número era ${randomNumber}.`
     }
-
 }
