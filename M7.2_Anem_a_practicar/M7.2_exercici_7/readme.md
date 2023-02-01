@@ -1,18 +1,4 @@
 # Calcula si l'any és de traspàs
 
-HTML
-
-1. 
-
-2. 
-
-3. 
-
-
-JAVASCRIPT
-
-1. 
-
-2. 
-
-3. 
+L’usuari/ària introdueix un any “a” per teclat
+i el programa crida a un mètode que indiqui si l’any és de traspàs o no.
