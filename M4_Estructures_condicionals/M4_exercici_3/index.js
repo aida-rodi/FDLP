@@ -7,6 +7,6 @@ function sendData() {
     (userAdult === "Sí" && userTitle === "Sí") || userUnemployed === "Sí";
 
   document.getElementById("result").innerHTML = userHasScholarship
-    ? "Felicitats, compleixes els requisits per a l'obtenció una beca."
+    ? "Felicitats, compleixes els requisits per a l'obtenció d'una beca."
     : "Ho sentim, no compleixes els requisits per a l'obtenció d'una beca.";
 }
