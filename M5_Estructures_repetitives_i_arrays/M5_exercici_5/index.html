@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <h1>Comprovar beques</h1>
+      <h1>Comprovar beques (Ara el programa només donarà 5 beques)</h1>
     </header>
 
     <main>
@@ -19,60 +19,12 @@
         d'accés a una beca.
       </p>
 
-      <p>1. Ets major d'edat?</p>
-      <input type="text" id="userAge" placeholder="Escriu la teva resposta" />
-
-      <p>2. Disposes d'un títol universitari?</p>
-      <input type="text" id="userTitle" placeholder="Escriu la teva resposta" />
-
-      <p>3. Et trobes en situació d'atur?</p>
-      <input type="text" id="userUnemployed" placeholder="Escriu la teva resposta" />
-
       <div class="button">
-        <button onclick="sendData()">Envia</button>
+        <button onclick="checkScholarship()">Comença</button>
       </div>
 
-      <p id="result"></p>
+      <p id="scholarshipList"></p>
     </main>
-
-    <!-- <form>
-        <legend>1. Ets major d'edat?</legend>
-        <div>
-        <input type="radio" id="ageTrue" name="age" value="Yes" />
-        <label>Sí</label>
-        <br>
-        <input type="radio" id="ageFalse" name="age" value="No" />
-        <label>No</label>
-        </div>
-
-        <br>
-
-        <legend>2. Disposes d'un títol universitari?</legend>
-        <div>
-        <input type="radio" id="titleTrue" name="title" value="Yes" />
-        <label>Sí</label>
-        <br>
-        <input type="radio" id="titleFalse" name="title" value="No"/>
-        <label>No</label>
-        </div>
-
-        <br>
-
-        <legend>3. Et trobes en situació d'atur?</legend>
-        <div>
-        <input type="radio" id="jobTrue" name="job" value="Yes" />
-        <label>Sí</label>
-        <br>
-        <input type="radio" id="jobFalse" name="job" value="No" />
-        <label>No</label>
-        </div>
-
-        <br>
-
-        <div>
-        <button type="submit" onclick="sendData()">Envia</button>
-        </div>
-    </form> -->
   </body>
   <script src="index.js"></script>
 </html>
