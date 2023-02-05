@@ -34,3 +34,8 @@ function playGame() {
         return
     }
 }
+    if (userNumber === randomNumber) {
+        document.getElementById("result").innerHTML = `Felicitats, l'has encertat! El número era ${randomNumber}`
+        return
+    }
+}

@@ -27,3 +27,9 @@ prompt bucle
 if 6
 imprimir resultado de pista
 si adivina imprimir resultado Felicidades!
+## JAVASCRIPT
+function
+prompt bucle
+if 6
+imprimir resultado de pista
+si adivina imprimir resultado Felicidades!
