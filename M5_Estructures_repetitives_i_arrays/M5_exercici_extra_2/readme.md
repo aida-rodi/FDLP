@@ -21,12 +21,3 @@ La base serà  la divisió del nombre entre 2 : (5 / 2) + 1 = 3
 *
 
 * * *
-
-HTML
-
-1. 
-
-
-JAVASCRIPT
-
-1. 

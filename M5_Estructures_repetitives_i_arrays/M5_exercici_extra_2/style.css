@@ -5,3 +5,8 @@ html {
 body {
     text-align: center;
 }
+
+#result {
+    text-align: left;
+    margin-left: 47%;
+}
