@@ -11,10 +11,10 @@ function printLetter() {
     const letterVertical = []
     const letterHorizontal = []
 
-    for (let index = 0; index < letterHeight; index++) {
+    for (let i = 0; i < letterHeight; i++) {
         letterVertical.push("*") 
     }
-    for (let index = 1; index < letterWidth; index++) {
+    for (let i = 1; i < letterWidth; i++) {
         letterHorizontal.push("*") 
     }
 

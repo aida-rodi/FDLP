@@ -38,4 +38,3 @@ function playGame() {
         document.getElementById("result").innerHTML = `Felicitats, l'has encertat! El número era ${randomNumber}`
         return
     }
-}
