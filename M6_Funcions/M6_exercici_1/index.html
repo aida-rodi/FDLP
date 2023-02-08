@@ -14,7 +14,20 @@
     </header>
 
     <main>
-        
+        <p>Introdueix dos números i després indica quina operació vols realitzar</p>
+        <input type="text" id="firstNumber" placeholder="Escriu un número">
+        <input type="text" id="secondNumber" placeholder="Escriu un número">
+        <br>
+        <br>
+        <div class="buttons">
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">x</button>
+            <button onclick="divide()">÷</button>
+            <button onclick="remainder()">%</button> 
+        </div>
+        <p id="result"></p>
+
     </main>
 </body>
 
