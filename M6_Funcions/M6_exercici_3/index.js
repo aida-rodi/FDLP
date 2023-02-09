@@ -26,15 +26,15 @@ function sentenceToLowerCase(userSentence) {
 }
 
 function findSchoolSubjects(arrayOfSubjects, userSubject) {
-    let userSubjectLength = userSubject.length -1
+    debugger
     const foundSubjects = [];
 
 for (let index = 0; index < arrayOfSubjects.length; index++) {
     let currentSubject = arrayOfSubjects[index];
     if (
-        currentSubject[0,userSubjectLength] === userSubject[0,userSubjectLength]
+        currentSubject.includes(userSubject)
     ) {
-        foundSubjects.push(arrayOfSubjects[index])
+        foundSubjects.push(currentSubject)
     }
 }  
     console.log(foundSubjects)
