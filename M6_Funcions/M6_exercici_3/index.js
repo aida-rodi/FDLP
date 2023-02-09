@@ -25,7 +25,20 @@ function sentenceToLowerCase(userSentence) {
     console.log(userSentence);
 }
 
-function findSchoolSubjects(arrayOfSubjects, subject) {}
+function findSchoolSubjects(arrayOfSubjects, userSubject) {
+    let userSubjectLength = userSubject.length -1
+    const foundSubjects = [];
+
+for (let index = 0; index < arrayOfSubjects.length; index++) {
+    let currentSubject = arrayOfSubjects[index];
+    if (
+        currentSubject[0,userSubjectLength] === userSubject[0,userSubjectLength]
+    ) {
+        foundSubjects.push(arrayOfSubjects[index])
+    }
+}  
+    console.log(foundSubjects)
+}
 
 function menu(id) {
     if (id === 1) {
@@ -38,12 +51,16 @@ function menu(id) {
         sentenceToLowerCase("A Cornellà, Tània i Aina tallen roca.");
     }
     if (id === 4) {
-        findSchoolSubjects([
-            "Història universal",
-            "Història d'Espanya",
-            "Geografia",
-            "Història de la llengua catalana",
-            "Antropologia",
-            "Anglès"], "Història");
+        findSchoolSubjects(
+            [
+                "Història universal",
+                "Història d'Espanya",
+                "Geografia",
+                "Història de la llengua catalana",
+                "Antropologia",
+                "Anglès",
+            ],
+            "Història"
+        );
     }
 }
