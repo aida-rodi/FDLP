@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcula el cost d'una fideuà</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calcula el cost d'una fideuà</h1>
+    </header>
+    
+    <main>
+        <p>¿Para cuántas personas será la fideuá?</p>
+        <input type="text" id="numberOfPeople" placeholder="Escribe un número">
+        <br>
+        <br>
+        <p><strong>Introduce el precio por Kg de cada ingrediente:</strong></p>
+        <p>¿Cuánto cuesta 1Kg de fideos?</p>
+        <input type="text" id="priceOfNoodlesPerKg" placeholder="Escribe un número">
+        <br>
+        <br>
+        <p>¿Cuánto cuesta 1Kg de calamares?</p>
+        <input type="text" id="priceOfSquidPerKg" placeholder="Escribe un número">
+        <br>
+        <br>
+        <p>¿Cuánto cuesta 1Kg de gambas?</p>
+        <input type="text" id="priceOfShrimpPerKg" placeholder="Escribe un número">
+        <br>
+        <br>
+        <br>
+        <button onclick="calculatePrice()">Calcular</button>
+        <br>
+        <br>
+        <p id="totalPriceResult"></p>
+        <p id="portionPriceResult"></p>
+    </main>
+</body>
+
+<script src="index.js"></script>
+</html>
