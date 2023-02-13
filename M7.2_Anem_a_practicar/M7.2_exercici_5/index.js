@@ -1,22 +1,18 @@
-function calculate() {
+function printResult() {
     const userNumber = Number(document.getElementById("userNumber").value);
-    let isPrime = undefined
-    
-    for (let index = 2; index < userNumber; index++) {
+    const isPrime = isPrime(userNumber) ? "es primo" : "no es primo";
 
-        if (userNumber % index === 0) {
-            isPrime = false
-        }
+    document.getElementById("result").innerHTML = `El número ${userNumber} ${isPrime}.`;
+    console.log("hola")
+}
 
-        else if (isPrime !== false) {
-            isPrime = true
-        }
+function isPrime(num) {
+    console.log("mundo")
+    if (userNumber === 0 || userNumber === 1) return false;
+
+    for (let i = 2; i < userNumber; i++) {
+        if (userNumber % i === 0) return false;
     }
-      
-    if (isPrime === true) {
-        document.getElementById("result").innerHTML = `El número ${userNumber} es primo.`
-    }
-    if (isPrime === false) {
-        document.getElementById("result").innerHTML = `El número ${userNumber} no es primo.`
-    }
+
+    return true;
 }

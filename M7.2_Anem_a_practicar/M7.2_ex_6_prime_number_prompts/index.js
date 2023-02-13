@@ -1,51 +1,35 @@
 function calculate() {
-    let userNumber = undefined
-    let isPrime = undefined
-    
+
+    let isPrime = true // el numero es primo hasta que se demuestre lo contrario
+
+    const num = Number(prompt("Escribe un número, por favor"))
+    checkPrime(num);
+
+
     function checkPrime(userNumber) {
-        if (isNaN(userNumber) || userNumber <= 0) {
-            isPrime = undefined
-            checkPrime(userNumber = Number(prompt("Comprueba que hayas introducido un número mayor a 0.")))
+
+        const isValidValue = !isNaN(userNumber) && userNumber > 1
+
+        if (!isValidValue) {
+            const num = Number(prompt("Comprueba que hayas introducido un número mayor a 1."))
+            isPrime = true
+            checkPrime(num)
         }
 
-        for (let index = 2; index < userNumber; index++) {
-            if (userNumber % index === 0) {
-                isPrime = false
+        if (isValidValue) {
+
+            for (let index = 2; index < userNumber && isPrime === true; index++) {
+                if (userNumber % index === 0) isPrime = false
             }
-    
-            else if (isPrime !== false) {
+            
+            if (isPrime) {
+                document.getElementById("result").innerHTML = `El número ${userNumber} es primo.`
+            }
+            if (!isPrime) {
+                const num = Number(prompt(`El numero ${userNumber} no es primo... Inténtalo de nuevo` ))
                 isPrime = true
+                checkPrime(num)
             }
         }
-        
-        console.log (isPrime)
-        if (isPrime === true) {
-            document.getElementById("result").innerHTML = `El número ${userNumber} es primo.`
-        }
-        if (isPrime === false) {
-            isPrime = undefined
-            checkPrime(userNumber = Number(prompt("Inténtalo de nuevo")))
-        }
-    }
-
-    if (isPrime === undefined || isPrime === false) {
-        checkPrime(userNumber = Number(prompt("Escribe un número, por favor")));
     }
 }
-
-
-/* function calculate(){
-    let userNumber = Number(prompt("Escribe un número, por favor"));
-
-    for (let index = 2; index < userNumber; index++) {
-        if (userNumber%index === 0 ) {
-            let isPrime = false  
-            console.log (isPrime)
-         // userNumber = prompt("¡Sigue intentando, por favor!")
-            return 
-        }
-        else {isPrime = true}
-    }
-    console.log (isPrime)
-    document.getElementById("result").innerHTML= `El numero ${userNumber} es primo`
-} */
