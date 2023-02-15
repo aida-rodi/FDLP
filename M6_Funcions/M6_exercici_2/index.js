@@ -3,7 +3,7 @@ function retrieveAges(numberOfPeople) {
 
     while (agesArray.length < numberOfPeople) {
         const age = Number(prompt("Indica l'edat"));
-        const isValidAge = age > 0 && age < 120;
+        const isValidAge = age >= 0 && age <= 120;
 
         isValidAge ? agesArray.push(age) : alert("Escriu l'edat correctament");
     }
