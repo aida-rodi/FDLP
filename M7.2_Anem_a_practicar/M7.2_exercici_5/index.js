@@ -1,18 +1,33 @@
-function printResult() {
-    const userNumber = Number(document.getElementById("userNumber").value);
-    const isPrime = isPrime(userNumber) ? "es primo" : "no es primo";
+function calculate() {
 
-    document.getElementById("result").innerHTML = `El número ${userNumber} ${isPrime}.`;
-    console.log("hola")
-}
+    let isPrime = true // el numero es primo hasta que se demuestre lo contrario
 
-function isPrime(num) {
-    console.log("mundo")
-    if (userNumber === 0 || userNumber === 1) return false;
+    const num = Number(prompt("Escribe un número, por favor"))
+    checkPrime(num);
 
-    for (let i = 2; i < userNumber; i++) {
-        if (userNumber % i === 0) return false;
+
+    function checkPrime(userNumber) {
+
+        const isValidValue = !isNaN(userNumber) && userNumber >= 1
+
+        if (!isValidValue) {
+            const num = Number(prompt("Comprueba que hayas introducido un número mayor a 0."))
+            isPrime = true
+            checkPrime(num)
+        }
+
+        if (isValidValue) {
+
+            for (let index = 2; index < userNumber && isPrime === true; index++) {
+                if (userNumber % index === 0) isPrime = false
+            }
+            
+            if (isPrime) {
+                document.getElementById("result").innerHTML = `El número ${userNumber} es primo.`
+            }
+            if (!isPrime) {
+                document.getElementById("result").innerHTML = `El número ${userNumber} no es primo.`
+            }
+        }
     }
-
-    return true;
 }
