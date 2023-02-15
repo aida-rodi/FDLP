@@ -28,7 +28,7 @@ Quan no passo una funció com a segon paràmetre a la funció myFilter, veiem un
 La funció myFilter hauria de funcionar amb els següents casos
 
 
-### Cas 1: isBiggerThanFive
+## Cas 1: isBiggerThanFive
 
 Donada l'array [1,2,3,4,5,6,7,8,9,10] i la funció isBiggerThanFive
 
