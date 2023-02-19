@@ -108,8 +108,6 @@ const films = [
 	}
 ];
 
-let foundFilms = [...films]
-
 function showFilms(films) {
 
     const formatedFilms = films.map((film, i) => {
@@ -126,39 +124,23 @@ function showFilms(films) {
 
 showFilms(films);
 
-function searchFilmsByCriteria() {
-	const userSearch = document.getElementById("search-value").value
-	console.log(userSearch)
-
-	foundFilms = [];
-
-	for (let index = 0; index < films.length; index++) {
-		let currentFilm = films[index];
-		if ((currentFilm.title).includes(userSearch) ||
-			(currentFilm.year).includes(userSearch) ||
-			(currentFilm.genre).includes(userSearch) ||
-			(currentFilm.director).includes(userSearch) ||
-			(currentFilm.actors).includes(userSearch)
-		) {
-			foundFilms.push(currentFilm)
-		}
-	}
-
-    showFilms(foundFilms)
+function searchByCriteria() {
+    //showFilms()
 }
 
 function sortByRatingDesc() {
-	foundFilms.sort((a, b) => b.imdbRating - a.imdbRating);
-    showFilms(foundFilms)
+	films.sort((a, b) => b.imdbRating - a.imdbRating);
+    showFilms(films)
 }
 
 function sortByRatingAsc() {
-	foundFilms.sort((a, b) => a.imdbRating - b.imdbRating);
-    showFilms(foundFilms)
+	films.sort((a, b) => a.imdbRating - b.imdbRating);
+    showFilms(films)
 }
 
 function findByGenre(genre) {
-	foundFilms = [];
+	const foundFilms = [];
+
 	for (let index = 0; index < films.length; index++) {
 		let currentFilm = films[index];
 		if (
@@ -167,5 +149,6 @@ function findByGenre(genre) {
 			foundFilms.push(currentFilm)
 		}
 	}
+    
 	showFilms(foundFilms)
 }
