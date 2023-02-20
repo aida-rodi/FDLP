@@ -120,13 +120,11 @@ function showFilms(films) {
 showFilms(films);
 
 function searchFilmsByCriteria() {
-    const userSearch = document
-        .getElementById("search-value")
-        .value.toLowerCase();
+    const userSearch = document.getElementById("search-value").value.toLowerCase();
 
     foundFilms = films.filter(function (film) {
         const existsInTitle = film.title.toLowerCase().includes(userSearch);
-        const existsInYear = film.year === userSearch;
+        const existsInYear = film.year.includes(userSearch);
         const existsInGenre = film.genre.find((genre) => genre.toLowerCase().includes(userSearch));
         const existsInDirector = film.director.toLowerCase().includes(userSearch);
         const existsInActors = film.actors.find((actor) => actor.toLowerCase().includes(userSearch));
@@ -138,13 +136,11 @@ function searchFilmsByCriteria() {
 }
 
 function sortByRatingDesc() {
-	
     foundFilms.sort((a, b) => b.imdbRating - a.imdbRating);
     showFilms(foundFilms);
 }
 
 function sortByRatingAsc() {
-	
     foundFilms.sort((a, b) => a.imdbRating - b.imdbRating);
     showFilms(foundFilms);
 }
