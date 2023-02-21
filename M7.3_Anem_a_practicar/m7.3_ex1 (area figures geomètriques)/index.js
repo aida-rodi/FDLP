@@ -30,10 +30,11 @@ function enterDimensions() {
 
 function calculate() {
     document.getElementById("calculate").style.visibility = 'hidden';
-    document.getElementById("opcio").value = '';
+    document.getElementById("option").value = '';
     
     switch (OPTION) {
         case 1: {
+
             document.getElementById("getSide").style.visibility = 'hidden';
             
             const square = Number(document.getElementById("getSide").value) ** 2;
@@ -59,7 +60,6 @@ function calculate() {
         }
         case 3: {
 
-
             const height = Number(document.getElementById("getBase").value);
             const base = Number(document.getElementById("getHeight").value);
             document.getElementById("getBase").style.visibility = 'hidden';
@@ -72,12 +72,13 @@ function calculate() {
             break;
         }
         case 4: {
+
             document.getElementById("getRadius").style.visibility = 'hidden';
             const radius = Number(document.getElementById("getRadius").value);
             document.getElementById("getRadius").style.value = '';
             
-            const cercle = ((Math.PI * radius) ** 2).toFixed(2);
-            document.getElementById("result").innerHTML = `Àrea del cercle: ${cercle}`;
+            const circle = ((Math.PI * radius) ** 2).toFixed(2);
+            document.getElementById("result").innerHTML = `Àrea del cercle: ${circle}`;
             break;
         }
     }
