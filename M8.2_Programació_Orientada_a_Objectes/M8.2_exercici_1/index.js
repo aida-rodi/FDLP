@@ -17,6 +17,7 @@ function createComputer() {
     
     const computer = new Computer(id, brand, model, cpu, ram, hd);
     listOfComputers.push(computer)
+    
     formatToString()
 
 }
@@ -49,6 +50,7 @@ function updateComputer() {
         const newHD = prompt('Introduce el nuevo disco duro')
         foundComputer.setHD(newHD)
     }
+    
     formatToString()
 }
 

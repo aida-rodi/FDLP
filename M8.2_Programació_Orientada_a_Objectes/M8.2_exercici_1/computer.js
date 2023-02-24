@@ -59,12 +59,12 @@ export class Computer {
         return `Se está utilizando: ${browser}`
     } */
 
-    /* formatToString () {
-        return `Las partes del ordenador son:
-        Marca: ${this.#brand}
-        Modelo: ${this.#model}
-        CPU: ${this.#cpu}
-        Ram: ${this.#ram}
-        Disco duro: ${this.#hd}`
+/*     toString() {
+        return `💻 - ${this.#id} <br>
+        Marca: ${this.#brand} <br>
+        Modelo: ${this.#model} <br>
+        CPU: ${this.#cpu} <br>
+        Ram: ${this.#ram} <br>
+        Disco duro: ${this.#hd} <br><br>`
     } */
 }
