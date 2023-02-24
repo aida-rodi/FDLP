@@ -13,7 +13,9 @@ La **funció veureHotel()** haurà de rebre el nom de l'hotel que vol que mostre
 La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modificar. L’usuari/ària introduirà el nom de l’hotel. Si el tenim a l’aplicació, li demanarem si vol modificar el nombre d’habitacions, el nombre de plantes o la superfície total de l’hotel. Farem la modificació pertinent i avisarem a l’usuari/ària que la modificació s’ha realitzat.
 
 
-## To do
+## JAVASCRIPT
+
+### hotel.js
 
 1. Crear classe **hotel** amb els atributs:
     - nom
@@ -21,21 +23,20 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
     - número de plantes
     - superfície total de l'hotel
 
-
 2. Afegir a la classe **hotel** els mètodes:
     - get (un per cada atribut)
     - set (un per cada atribut)
     - calcularManteniment()
 
+### main.js
 
-3. Crear la funció **crearHotel()**, que demana per pantalla a l'usuari les dades:
+1. Crear la funció **crearHotel()**, que demana per pantalla a l'usuari les dades:
     - nom
     - número d'habitacions
     - número de plantes
     - superfície total de l'hotel
 
-
-4. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
+2. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
     - Si l'hotel es troba a la base de dades aquest es mostrarà per pantalla amb les següents dades:
         - nom
@@ -44,12 +45,14 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
         - superfície total de l'hotel
         - I també es cridarà al mètode **calcularManteniment()**
 
-
-5. Crear la funció **modificarHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
+3. Crear la funció **modificarHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
     - Si l'hotel es troba a la base de dades demanarem a l'usuari si vol modificar:
         - el nombre d’habitacions
         - el nombre de plantes
         - la superfície total de l’hotel
     - Farem la modificació pertinent i avisarem a l’usuari de que la modificació s’ha realitzat. Mostrarem també l'hotel amb les noves dades per pantalla.
-    
+
+## HTML
+
+1. asdf
