@@ -55,4 +55,7 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
 
 ## HTML
 
-1. asdf
+1. Crear botons:
+    - Afegir nou hotel
+    - Veure hotel
+    - Modificar hotel
