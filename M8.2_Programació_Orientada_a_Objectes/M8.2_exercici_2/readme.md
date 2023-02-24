@@ -21,16 +21,19 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
     - número de plantes
     - superfície total de l'hotel
 
+
 2. Afegir a la classe **hotel** els mètodes:
     - get (un per cada atribut)
     - set (un per cada atribut)
     - calcularManteniment()
+
 
 3. Crear la funció **crearHotel()**, que demana per pantalla a l'usuari les dades:
     - nom
     - número d'habitacions
     - número de plantes
     - superfície total de l'hotel
+
 
 4. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
@@ -41,11 +44,12 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
         - superfície total de l'hotel
         - I també es cridarà al mètode **calcularManteniment()**
 
+
 5. Crear la funció **modificarHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
     - Si l'hotel es troba a la base de dades demanarem a l'usuari si vol modificar:
         - el nombre d’habitacions
         - el nombre de plantes
         - la superfície total de l’hotel
-    Farem la modificació pertinent i avisarem a l’usuari de que la modificació s’ha realitzat. Mostrarem també l'hotel amb les noves dades per pantalla.
+    - Farem la modificació pertinent i avisarem a l’usuari de que la modificació s’ha realitzat. Mostrarem també l'hotel amb les noves dades per pantalla.
     
