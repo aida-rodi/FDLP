@@ -32,7 +32,7 @@ function updateComputer() {
     }
   }
   
-  const computerFound = listComputers.find( findId  )
+  const computerFound = listComputers.find( findId )
 
   const changeCPU = confirm('Do you want change cpu?')
   if ( changeCPU === true ){

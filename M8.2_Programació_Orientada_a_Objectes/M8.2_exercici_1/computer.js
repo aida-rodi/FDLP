@@ -1,10 +1,12 @@
 export class Computer {
+
     #id
     #brand
     #model
     #cpu
     #ram
     #hd
+    
     constructor(id, brand, model, cpu, ram, hd) {
 
         this.#id = id
@@ -15,49 +17,54 @@ export class Computer {
         this.#hd = hd
     }
 
+    getId() {
+        return this.#id
+    }
     getBrand() {
         return this.#brand
     }
     getModel() {
         return this.#model
     }
-    getCpu() {
+    getCPU() {
         return this.#cpu
     }
-    getRam() {
+    getRAM() {
         return this.#ram
     }
-    getHd() {
+    getHD() {
         return this.#hd
     }
 
+    setId(id) {
+        this.#id = id
+    }
     setBrand(brand) {
         this.#brand = brand
     }
     setModel(model) {
         this.#model = model
     }
-    setCpu(cpu) {
+    setCPU(cpu) {
         this.#cpu = cpu
     }
-    setRam(ram) {
+    setRAM(ram) {
         this.#ram = ram
     }
-    setHd(hd) {
+    setHD(hd) {
         this.#hd = hd
     }
 
-    showBrowserInUse(browser) {
+    /* showBrowser(browser) {
         return `Se está utilizando: ${browser}`
-    }
+    } */
 
-    formatToString () {
+    /* formatToString () {
         return `Las partes del ordenador son:
         Marca: ${this.#brand}
         Modelo: ${this.#model}
         CPU: ${this.#cpu}
         Ram: ${this.#ram}
         Disco duro: ${this.#hd}`
-
-    }
+    } */
 }
