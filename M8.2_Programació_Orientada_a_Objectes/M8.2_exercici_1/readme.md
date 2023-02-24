@@ -1,19 +1,31 @@
-# Programa per crear ordinadors
+# Ordenadores
 
-Crea una classe en JavaScript anomenada "Ordinador", en un fitxer anomenat ordinador.js
+Se muestran 3 botones:
 
-Aquesta classe tindrà com a atributs la marca, el model, el processador, la quantitat de memòria RAM i la capacitat del disc dur.
+1. Button que hace aparecer un prompt para pedir datos al usuario
 
-A més del constructor, ha de disposar dels següents mètodes:
+2. Button para mostrar información del ordenador en un alert
 
-Mètodes que permetin consultar cadascun dels atributs (getters).
-Mètodes que permetin modificar el processador, la quantitat de memòria ram i la capacitat del disc dur. (setters).
-Un mètode que rebrà un paràmetre i retornarà una frase que digui:
-"En aquests moments s'està executant: 'X'" (X és el paràmetre rebut pel mètode i que normalment serà el nom d'un programa).
-Exemple: "En aquests moments s'està executant: Chrome" 
-Un mètode que retornarà una descripció completa de l'ordinador (toString()).
-En un altre fitxer anomenat main.js, crea la funció crearOrdinadors().
+3. Button para mostrar el navegador en un alert
 
-Dintre d'aquesta funció, demanarem a l'usuari/ària mitjançant promtps les dades de dos ordinadors. 
+4. Button para modificar cpu, ram y hd de los ordenadores
 
-Un cop introduïdes les dades dels dos ordinadors, crida als mètodes de la classe Ordinador per comprovar que funcionen correctament.
+Datos del ordenador:
+- marca
+- modelo
+- cpu
+- ram
+- hd
+
+class Ordenador {
+    #
+    #
+    #
+        constructor() {
+
+        }
+}
+
+mostrar navegador (param) {
+    return 'Estás utilizando {} navegador
+}
