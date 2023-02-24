@@ -17,26 +17,28 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
 
 ### hotel.js
 
-1. Crear classe **hotel** amb els atributs:
+1. Crear classe **hotel** amb els atributs: ✔
     - nom
     - número d'habitacions
     - número de plantes
     - superfície total de l'hotel
 
-2. Afegir a la classe **hotel** els mètodes:
+2. Afegir a la classe **hotel** els mètodes: ✔
     - get (un per cada atribut)
     - set (un per cada atribut)
     - calcularManteniment()
 
 ### main.js
 
-1. Crear la funció **crearHotel()**, que demana per pantalla a l'usuari les dades:
+1. Crear la funció **crearHotel()**, que demana per pantalla a l'usuari les dades: ✔
     - nom
     - número d'habitacions
     - número de plantes
     - superfície total de l'hotel
 
-2. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
+2. 
+
+3. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
     - Si l'hotel es troba a la base de dades aquest es mostrarà per pantalla amb les següents dades:
         - nom
@@ -45,7 +47,7 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
         - superfície total de l'hotel
         - I també es cridarà al mètode **calcularManteniment()**
 
-3. Crear la funció **modificarHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
+4. Crear la funció **modificarHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
     - Si l'hotel es troba a la base de dades demanarem a l'usuari si vol modificar:
         - el nombre d’habitacions
@@ -55,7 +57,7 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
 
 ## HTML
 
-1. Crear botons:
+1. Crear botons: ✔
     - Afegir nou hotel
     - Veure hotel
     - Modificar hotel

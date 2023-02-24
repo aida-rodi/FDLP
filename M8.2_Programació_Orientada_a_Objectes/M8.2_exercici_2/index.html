@@ -17,9 +17,46 @@
         <main>
             <div class="buttons">
                 <button id="addHotel">Add new hotel</button>
+                <button id="removeHotel">Remove hotel</button>
                 <button id="viewHotel">View hotel</button>
                 <button id="updateHotel">Update hotel</button>
             </div>
+
+            <div id="addHotelDiv" hidden>
+                <p>Enter a name for this hotel.</p>
+                <input type="text" id="name">
+                <p>Enter the number of rooms in this hotel.</p>
+                <input type="text" id="numberOfRooms">
+                <p>Enter the number of floors in this hotel.</p>
+                <input type="text" id="numberOfFloors">
+                <p>Enter the total area (in m2) of this hotel.</p>
+                <input type="text" id="totalArea">
+                <br><br>
+                <button id="addButton">Add</button>
+            </div>
+            <p id="hotelAddedMessage" hidden></p>
+
+            <div id="removeHotelDiv" hidden>
+                <p>Enter the name of the hotel that you wish to remove from the database.</p>
+                <input type="text" id="hotelToRemove">
+                <button id="removeButton">Remove</button>
+            </div>
+
+            <div id="viewHotelDiv" hidden>
+                <p>Enter the name of the hotel that you wish to view the details of.</p>
+                <p id="tip">Type 'all' to see the the details of all the hotels in the database.</p>
+                <input type="text" id="hotelToView">
+                <button id="viewButton">View</button>
+            </div>
+            <p id="hotelNotFoundMessage" hidden></p>
+            <p id="hotelRemovedMessage" hidden></p>
+
+            <div id="updateHotelDiv" hidden>
+                <p>Enter the name of the hotel that you wish to update.</p>
+                <input type="text" id="hotelToUpdate">
+                <button id="updateButton">Update</button>
+            </div>
+            
         </main>
     </body>
 </html>
