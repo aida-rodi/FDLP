@@ -24,13 +24,16 @@
 
             <div id="addHotelDiv" hidden>
                 <p>Enter a name for this hotel.</p>
-                <input type="text" id="name">
+                <input type="text" id="name" placeholder="Name of the hotel">
+                <br><br>
                 <p>Enter the number of rooms in this hotel.</p>
-                <input type="text" id="numberOfRooms">
+                <input type="text" id="numberOfRooms" placeholder="Number of rooms">
+                <br><br>
                 <p>Enter the number of floors in this hotel.</p>
-                <input type="text" id="numberOfFloors">
+                <input type="text" id="numberOfFloors" placeholder="Number of floors">
+                <br><br>
                 <p>Enter the total area (in m2) of this hotel.</p>
-                <input type="text" id="totalArea">
+                <input type="text" id="totalArea" placeholder="Total area">
                 <br><br>
                 <button id="addButton">Add</button>
             </div>
@@ -38,22 +41,23 @@
 
             <div id="removeHotelDiv" hidden>
                 <p>Enter the name of the hotel that you wish to remove from the database.</p>
-                <input type="text" id="hotelToRemove">
+                <input type="text" id="hotelToRemove" placeholder="Name of the hotel">
                 <button id="removeButton">Remove</button>
             </div>
 
             <div id="viewHotelDiv" hidden>
                 <p>Enter the name of the hotel that you wish to view the details of.</p>
                 <p id="tip">Type 'all' to see the the details of all the hotels in the database.</p>
-                <input type="text" id="hotelToView">
+                <input type="text" id="hotelToView" placeholder="Name of the hotel">
                 <button id="viewButton">View</button>
             </div>
             <p id="hotelNotFoundMessage" hidden></p>
             <p id="hotelRemovedMessage" hidden></p>
+            <p id="printHotel" hidden></p>
 
             <div id="updateHotelDiv" hidden>
                 <p>Enter the name of the hotel that you wish to update.</p>
-                <input type="text" id="hotelToUpdate">
+                <input type="text" id="hotelToUpdate" placeholder="Name of the hotel">
                 <button id="updateButton">Update</button>
             </div>
             
