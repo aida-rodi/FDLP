@@ -39,6 +39,13 @@ export class Hotel {
         this.#totalArea = totalArea
     }
 
+    toString() {
+        return `🏨 - ${this.#name}<br> 
+        Number of rooms: ${this.#numberOfRooms}<br>
+        Number of floors: ${this.#numberOfFloors}<br>
+        Total area: ${this.#totalArea}m2`
+    }
+
     calculateMaintenance() {
 
     }
