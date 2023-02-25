@@ -36,9 +36,11 @@ La **funció modificarHotel()** haurà de rebre el nom de l'hotel que volem modi
     - número de plantes
     - superfície total de l'hotel
 
-2. 
+2. Crear la funció **donarDeBaixaHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a eliminar de la base de dades. ✔
+    - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
+    - - Si l'hotel es troba a la base de dades aquest s'eliminarà i s'avisarà a l'usuari per pantalla
 
-3. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar.
+3. Crear la funció **veureHotel()**, que demana per pantalla a l'usuari el nom de l'hotel a mostrar. ✔
     - Si no es troba l'hotel informarem a l’usuari dient que l’hotel que ens ha demanat no està a la nostra aplicació
     - Si l'hotel es troba a la base de dades aquest es mostrarà per pantalla amb les següents dades:
         - nom

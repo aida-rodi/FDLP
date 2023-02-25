@@ -42,7 +42,7 @@ function addHotel() {
 
     console.log(listOfHotels);
 
-    document.getElementById("hotelAddedMessage").innerHTML = `${name} has been added to the database ✔`;
+    document.getElementById("hotelAddedMessage").innerHTML = `'${name}' has been added to the database ✔`;
 }
 
 function showRemoveHotel() {
@@ -69,16 +69,16 @@ function removeHotel() {
             return true;
         }
     }
-    console.log(foundHotelIndex);
-
-    document.getElementById("removeHotelDiv").hidden = true;
+    console.log(foundHotelIndex);    
 
     if (foundHotelIndex === -1) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
         document.getElementById("hotelRemovedMessage").hidden = true;
+        document.getElementById("hotelToRemove").value = ''
         document.getElementById("hotelNotFoundMessage").innerHTML = `No hotels matching the name '${userHotel}' were found in the database ⚠`;
     } else {
         listOfHotels.splice(foundHotelIndex, 1);
+        document.getElementById("removeHotelDiv").hidden = true;
         document.getElementById("hotelRemovedMessage").hidden = false;
         document.getElementById("hotelNotFoundMessage").hidden = true;
         document.getElementById("hotelRemovedMessage").innerHTML = `${userHotel} was successfully removed from the database ✔`;
@@ -105,6 +105,7 @@ function viewHotel() {
 
     if (userHotel === "all") {
         document.getElementById("viewHotelDiv").hidden = true
+        document.getElementById("hotelNotFoundMessage").hidden = true;
         document.getElementById("printHotel").hidden = false;
         formatToString();
         return
@@ -120,14 +121,15 @@ function viewHotel() {
 
     if (foundHotel === undefined) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
+        document.getElementById("hotelToView").value = ''
         document.getElementById("hotelNotFoundMessage").innerHTML = `No hotels matching the name '${userHotel}' were found in the database ⚠`;
         return
     }
 
+    document.getElementById("hotelNotFoundMessage").hidden = true;
     document.getElementById("printHotel").hidden = false;
-    document.getElementById("printHotel").innerHTML = foundHotel.toString();
-    
     document.getElementById("viewHotelDiv").hidden = true;
+    document.getElementById("printHotel").innerHTML = foundHotel.toString();
 }
 
 function showUpdateHotel() {
@@ -158,11 +160,13 @@ function updateHotel() {
 
     if (foundHotel === undefined) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
+        document.getElementById("hotelToUpdate").value = ''
         document.getElementById("hotelNotFoundMessage").innerHTML = `No hotels matching the name '${userHotel}' were found in the database ⚠`;
         return
     }
 
     document.getElementById("updateHotelDiv").hidden = true;
+    document.getElementById("hotelNotFoundMessage").hidden = true;
     document.getElementById("modificationsDiv").hidden=false
 
     document.getElementById("newName").value = "";

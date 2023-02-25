@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <script src="main.js" type="module"></script>
-        <title>Hotel manager</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" type="module"></script>
+    <title>Hotel manager</title>
+</head>
 
-    <body>
-        <header>
-            <h1>Manage your hotels one click at a time</h1>
-        </header>
+<body>
+    <header>
+        <h1>Manage your hotels one click at a time</h1>
+    </header>
 
-        <main>
-            <div class="buttons">
-                <button id="addHotel">Add new hotel</button>
-                <button id="removeHotel">Remove hotel</button>
-                <button id="viewHotel">View hotel</button>
-                <button id="updateHotel">Update hotel</button>
-            </div>
+    <main>
+        <div class="buttons">
+            <button id="addHotel">Add new hotel</button>
+            <button id="removeHotel">Remove hotel</button>
+            <button id="viewHotel">View hotel</button>
+            <button id="updateHotel">Update hotel</button>
+        </div>
 
-            <div id="addHotelDiv" hidden>
-                <p>Enter a name for this hotel.</p>
-                <input type="text" id="name" placeholder="Name of the hotel">
-                <br><br>
-                <p>Enter the number of rooms in this hotel.</p>
-                <input type="text" id="numberOfRooms" placeholder="Number of rooms">
-                <br><br>
-                <p>Enter the number of floors in this hotel.</p>
-                <input type="text" id="numberOfFloors" placeholder="Number of floors">
-                <br><br>
-                <p>Enter the total area (in m2) of this hotel.</p>
-                <input type="text" id="totalArea" placeholder="Total area">
-                <br><br>
-                <button id="addButton">Add</button>
-            </div>
-            <p id="hotelAddedMessage" hidden></p>
+        <div id="addHotelDiv" hidden>
+            <p>Enter a name for this hotel.</p>
+            <input type="text" id="name" placeholder="Name of the hotel">
+            <br><br>
+            <p>Enter the number of rooms in this hotel.</p>
+            <input type="text" id="numberOfRooms" placeholder="Number of rooms">
+            <br><br>
+            <p>Enter the number of floors in this hotel.</p>
+            <input type="text" id="numberOfFloors" placeholder="Number of floors">
+            <br><br>
+            <p>Enter the total area (in m2) of this hotel.</p>
+            <input type="text" id="totalArea" placeholder="Total area">
+            <br><br>
+            <button id="addButton">Add</button>
+        </div>
 
-            <div id="removeHotelDiv" hidden>
-                <p>Enter the name of the hotel that you wish to remove from the database.</p>
-                <input type="text" id="hotelToRemove" placeholder="Name of the hotel">
-                <button id="removeButton">Remove</button>
-            </div>
+        <div id="removeHotelDiv" hidden>
+            <p>Enter the name of the hotel that you wish to remove from the database.</p>
+            <input type="text" id="hotelToRemove" placeholder="Name of the hotel">
+            <button id="removeButton">Remove</button>
+        </div>
 
-            <div id="viewHotelDiv" hidden>
-                <p>Enter the name of the hotel that you wish to view the details of.</p>
-                <p id="tip">Type 'all' to see the the details of all the hotels in the database.</p>
-                <input type="text" id="hotelToView" placeholder="Name of the hotel">
-                <button id="viewButton">View</button>
-            </div>
-            <p id="hotelNotFoundMessage" hidden></p>
-            <p id="hotelRemovedMessage" hidden></p>
-            <p id="printHotel" hidden></p>
+        <div id="viewHotelDiv" hidden>
+            <p>Enter the name of the hotel that you wish to view the details of.</p>
+            <p id="tip">Type 'all' to see the the details of all the hotels in the database.</p>
+            <input type="text" id="hotelToView" placeholder="Name of the hotel">
+            <button id="viewButton">View</button>
+        </div>
 
-            <div id="updateHotelDiv" hidden>
-                <p>Enter the name of the hotel that you wish to update.</p>
-                <input type="text" id="hotelToUpdate" placeholder="Name of the hotel">
-                <button id="updateButton">Update</button>
-            </div>
-            
-            <div id="modificationsDiv" hidden>
-                <p>Enter the new name of this hotel.</p>
-                <input type="text" id="newName" placeholder="Name of the hotel">
-                <br><br>
-                <p>Enter the new number of rooms in this hotel.</p>
-                <input type="text" id="newNumberOfRooms" placeholder="Number of rooms">
-                <br><br>
-                <p>Enter the new number of floors in this hotel.</p>
-                <input type="text" id="newNumberOfFloors" placeholder="Number of floors">
-                <br><br>
-                <p>Enter the new total area (in m2) of this hotel.</p>
-                <input type="text" id="newTotalArea" placeholder="Total area">
-                <br><br>
-                <button id="modifyButton">Update</button>
+        <div id="updateHotelDiv" hidden>
+            <p>Enter the name of the hotel that you wish to update.</p>
+            <input type="text" id="hotelToUpdate" placeholder="Name of the hotel">
+            <button id="updateButton">Update</button>
+        </div>
+        
+        <div id="modificationsDiv" hidden>
+            <p>Enter the new name of this hotel.</p>
+            <input type="text" id="newName" placeholder="Name of the hotel">
+            <br><br>
+            <p>Enter the new number of rooms in this hotel.</p>
+            <input type="text" id="newNumberOfRooms" placeholder="Number of rooms">
+            <br><br>
+            <p>Enter the new number of floors in this hotel.</p>
+            <input type="text" id="newNumberOfFloors" placeholder="Number of floors">
+            <br><br>
+            <p>Enter the new total area (in m2) of this hotel.</p>
+            <input type="text" id="newTotalArea" placeholder="Total area">
+            <br><br>
+            <button id="modifyButton">Update</button>
+        </div>
 
-            </div>
-        </main>
-    </body>
+        <p id="hotelNotFoundMessage" hidden></p>
+        <p id="hotelAddedMessage" hidden></p>
+        <p id="hotelRemovedMessage" hidden></p>
+        <p id="printHotel" hidden></p>
+    </main>
+</body>
 </html>

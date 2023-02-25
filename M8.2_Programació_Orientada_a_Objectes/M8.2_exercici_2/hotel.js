@@ -43,10 +43,13 @@ export class Hotel {
         return `🏨 - ${this.#name}<br> 
         Number of rooms: ${this.#numberOfRooms}<br>
         Number of floors: ${this.#numberOfFloors}<br>
-        Total area: ${this.#totalArea}m2`
+        Total area: ${this.#totalArea}m2<br>
+        Monthly maintenance cost: ${this.calculateMaintenance()}€`
     }
 
     calculateMaintenance() {
-
+        const workersNeeded = this.#numberOfRooms / 20
+        const monthlyCost = workersNeeded * 1500
+        return monthlyCost.toFixed(0).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
     }
 }
