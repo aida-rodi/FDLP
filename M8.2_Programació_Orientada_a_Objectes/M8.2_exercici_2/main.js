@@ -8,6 +8,7 @@ document.getElementById("viewHotel").addEventListener("click", showViewHotel);
 document.getElementById("viewButton").addEventListener("click", viewHotel);
 document.getElementById("updateHotel").addEventListener("click", showUpdateHotel);
 document.getElementById("updateButton").addEventListener("click", updateHotel);
+document.getElementById("modifyButton").addEventListener("click", modifyHotel);
 
 const listOfHotels = [];
 
@@ -156,7 +157,7 @@ function updateHotel() {
             return true;
         }
     }
-    console.log(foundHotel);
+    //console.log(foundHotel);
 
     if (foundHotel === undefined) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
@@ -173,8 +174,22 @@ function updateHotel() {
     document.getElementById("newNumberOfRooms").value = "";
     document.getElementById("newNumberOfFloors").value = "";
     document.getElementById("newTotalArea").value = "";
-    
-    
+}
+
+function modifyHotel(foundHotel) {
+    const newName = document.getElementById("newName").value;
+    const newNumberOfRooms = document.getElementById("newNumberOfRooms").value;
+    const newNumberOfFloors = document.getElementById("newNumberOfFloors").value;
+    const newTotalArea = document.getElementById("newTotalArea").value;
+
+    foundHotel.setName(newName)
+    foundHotel.setNumberOfRooms(newNumberOfRooms)
+    foundHotel.setNumberOfFloors(newNumberOfFloors)
+    foundHotel.setTotalArea(newTotalArea)
+
+    console.log(foundHotel)
+
+    document.getElementById("modificationsDiv").hidden=true
 }
 
 function formatToString() {
