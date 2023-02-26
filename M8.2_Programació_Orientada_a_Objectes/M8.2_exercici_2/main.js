@@ -174,9 +174,9 @@ function updateHotel() {
     document.getElementById("newNumberOfRooms").value = "";
     document.getElementById("newNumberOfFloors").value = "";
     document.getElementById("newTotalArea").value = "";
-}
 
-function modifyHotel(foundHotel) {
+}
+function modifyHotel() {
     const newName = document.getElementById("newName").value;
     const newNumberOfRooms = document.getElementById("newNumberOfRooms").value;
     const newNumberOfFloors = document.getElementById("newNumberOfFloors").value;
