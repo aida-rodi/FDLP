@@ -8,7 +8,7 @@ document.getElementById("viewHotel").addEventListener("click", showViewHotel);
 document.getElementById("viewButton").addEventListener("click", viewHotel);
 document.getElementById("updateHotel").addEventListener("click", showUpdateHotel);
 document.getElementById("updateButton").addEventListener("click", updateHotel);
-document.getElementById("modifyButton").addEventListener("click", modifyHotel);
+/* document.getElementById("modifyButton").addEventListener("click", modifyHotel); */
 
 const listOfHotels = [];
 
@@ -20,6 +20,7 @@ function showAddHotel() {
     document.getElementById("printHotel").hidden = true;
     document.getElementById("updateHotelDiv").hidden = true;
     document.getElementById("modificationsDiv").hidden = true;
+    document.getElementById("hotelUpdatedMessage").hidden = true;
     document.getElementById("hotelAddedMessage").hidden = true;
     document.getElementById("addHotelDiv").hidden = false;
 
@@ -41,7 +42,7 @@ function addHotel() {
     document.getElementById("addHotelDiv").hidden = true;
     document.getElementById("hotelAddedMessage").hidden = false;
 
-    console.log(listOfHotels);
+    //console.log(listOfHotels);
 
     document.getElementById("hotelAddedMessage").innerHTML = `'${name}' has been added to the database ✔`;
 }
@@ -53,6 +54,7 @@ function showRemoveHotel() {
     document.getElementById("printHotel").hidden = true;
     document.getElementById("updateHotelDiv").hidden = true;
     document.getElementById("modificationsDiv").hidden = true;
+    document.getElementById("hotelUpdatedMessage").hidden = true;
     document.getElementById("removeHotelDiv").hidden = false;
     document.getElementById("hotelRemovedMessage").hidden = true;
     document.getElementById("hotelNotFoundMessage").hidden = true;
@@ -70,7 +72,7 @@ function removeHotel() {
             return true;
         }
     }
-    console.log(foundHotelIndex);    
+    //console.log(foundHotelIndex);    
 
     if (foundHotelIndex === -1) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
@@ -84,7 +86,7 @@ function removeHotel() {
         document.getElementById("hotelNotFoundMessage").hidden = true;
         document.getElementById("hotelRemovedMessage").innerHTML = `${userHotel} was successfully removed from the database ✔`;
     }
-    console.log(listOfHotels);
+    //console.log(listOfHotels);
 }
 
 function showViewHotel() {
@@ -95,6 +97,7 @@ function showViewHotel() {
     document.getElementById("hotelNotFoundMessage").hidden = true;
     document.getElementById("updateHotelDiv").hidden = true;
     document.getElementById("modificationsDiv").hidden = true;
+    document.getElementById("hotelUpdatedMessage").hidden = true;
     document.getElementById("viewHotelDiv").hidden = false;
     document.getElementById("printHotel").hidden = true;
 
@@ -118,7 +121,7 @@ function viewHotel() {
             return true;
         }
     }
-    console.log(foundHotel);
+    //console.log(foundHotel);
 
     if (foundHotel === undefined) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
@@ -141,10 +144,15 @@ function showUpdateHotel() {
     document.getElementById("hotelNotFoundMessage").hidden = true;
     document.getElementById("viewHotelDiv").hidden = true;
     document.getElementById("printHotel").hidden = true;
-    document.getElementById("modificationsDiv").hidden = true;
+    document.getElementById("hotelUpdatedMessage").hidden = true;
     document.getElementById("updateHotelDiv").hidden = false;
+    document.getElementById("modificationsDiv").hidden = false;
 
     document.getElementById("hotelToUpdate").value = "";
+    document.getElementById("newName").value = "";
+    document.getElementById("newNumberOfRooms").value = "";
+    document.getElementById("newNumberOfFloors").value = "";
+    document.getElementById("newTotalArea").value = "";
 }
 
 function updateHotel() {
@@ -157,7 +165,7 @@ function updateHotel() {
             return true;
         }
     }
-    //console.log(foundHotel);
+    console.log(foundHotel);
 
     if (foundHotel === undefined) {
         document.getElementById("hotelNotFoundMessage").hidden = false;
@@ -166,17 +174,6 @@ function updateHotel() {
         return
     }
 
-    document.getElementById("updateHotelDiv").hidden = true;
-    document.getElementById("hotelNotFoundMessage").hidden = true;
-    document.getElementById("modificationsDiv").hidden=false
-
-    document.getElementById("newName").value = "";
-    document.getElementById("newNumberOfRooms").value = "";
-    document.getElementById("newNumberOfFloors").value = "";
-    document.getElementById("newTotalArea").value = "";
-
-}
-function modifyHotel() {
     const newName = document.getElementById("newName").value;
     const newNumberOfRooms = document.getElementById("newNumberOfRooms").value;
     const newNumberOfFloors = document.getElementById("newNumberOfFloors").value;
@@ -187,10 +184,31 @@ function modifyHotel() {
     foundHotel.setNumberOfFloors(newNumberOfFloors)
     foundHotel.setTotalArea(newTotalArea)
 
-    console.log(foundHotel)
+    document.getElementById("updateHotelDiv").hidden = true;
+    document.getElementById("modificationsDiv").hidden = true;
+    document.getElementById("hotelNotFoundMessage").hidden = true;
+    document.getElementById("hotelUpdatedMessage").hidden = false;
+    document.getElementById("hotelUpdatedMessage").innerHTML = `${userHotel} was successfully Updated ✔`;
+
+    console.log(foundHotel)  
+
+}
+
+/* function modifyHotel() {
+    const newName = document.getElementById("newName").value;
+    const newNumberOfRooms = document.getElementById("newNumberOfRooms").value;
+    const newNumberOfFloors = document.getElementById("newNumberOfFloors").value;
+    const newTotalArea = document.getElementById("newTotalArea").value;
+
+    foundHotel.setName(newName)
+    foundHotel.setNumberOfRooms(newNumberOfRooms)
+    foundHotel.setNumberOfFloors(newNumberOfFloors)
+    foundHotel.setTotalArea(newTotalArea)
+
+    //console.log(foundHotel)
 
     document.getElementById("modificationsDiv").hidden=true
-}
+} */
 
 function formatToString() {
     const formatedHotels = listOfHotels.map((hotel) => {

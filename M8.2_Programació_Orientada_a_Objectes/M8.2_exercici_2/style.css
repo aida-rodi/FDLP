@@ -57,3 +57,9 @@ input {
     font-weight: 500;
     margin-top: 2em;
 }
+
+#hotelUpdatedMessage {
+    color: rgb(69, 144, 69);
+    font-weight: 500;
+    margin-top: 2em;
+}
