@@ -2,7 +2,7 @@
 
 Se muestran 3 botones:
 
-1. Button que hace aparecer un prompt para pedir datos al usuario
+1. Button que hace aparecer un prompt para pedir datos del ordenador al usuario
 
 2. Button para mostrar información del ordenador en un alert
 
@@ -18,12 +18,13 @@ Datos del ordenador:
 - hd
 
 class Ordenador {
-    #
-    #
-    #
-        constructor() {
-
-        }
+    #marca
+    #modelo
+    #cpu
+    #ram
+    #hd
+    
+    constructor(marca, modelo, cpu, ram hd)
 }
 
 mostrar navegador (param) {
