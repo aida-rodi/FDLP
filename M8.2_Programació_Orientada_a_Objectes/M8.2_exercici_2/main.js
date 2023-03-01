@@ -1,4 +1,4 @@
-import { Hotel } from "./hotel.js";
+import { Hotel } from "./Hotel.js";
 
 document.getElementById("addHotel").addEventListener("click", showAddHotel);
 document.getElementById("addButton").addEventListener("click", addHotel);
@@ -8,7 +8,8 @@ document.getElementById("viewHotel").addEventListener("click", showViewHotel);
 document.getElementById("viewButton").addEventListener("click", viewHotel);
 document.getElementById("updateHotel").addEventListener("click", showUpdateHotel);
 document.getElementById("updateButton").addEventListener("click", updateHotel);
-/* document.getElementById("modifyButton").addEventListener("click", modifyHotel); */
+document.getElementById("modifyButton").addEventListener("click", () => modifyHotel(foundHotel));
+// () => modifyHotel(foundHotel)
 
 const listOfHotels = [];
 
@@ -145,14 +146,11 @@ function showUpdateHotel() {
     document.getElementById("viewHotelDiv").hidden = true;
     document.getElementById("printHotel").hidden = true;
     document.getElementById("hotelUpdatedMessage").hidden = true;
-    document.getElementById("updateHotelDiv").hidden = false;
-    document.getElementById("modificationsDiv").hidden = false;
+    document.getElementById("modificationsDiv").hidden = true;
+    document.getElementById("updateHotelDiv").hidden = false;    
 
     document.getElementById("hotelToUpdate").value = "";
-    document.getElementById("newName").value = "";
-    document.getElementById("newNumberOfRooms").value = "";
-    document.getElementById("newNumberOfFloors").value = "";
-    document.getElementById("newTotalArea").value = "";
+
 }
 
 function updateHotel() {
@@ -174,27 +172,22 @@ function updateHotel() {
         return
     }
 
-    const newName = document.getElementById("newName").value;
-    const newNumberOfRooms = document.getElementById("newNumberOfRooms").value;
-    const newNumberOfFloors = document.getElementById("newNumberOfFloors").value;
-    const newTotalArea = document.getElementById("newTotalArea").value;
-
-    foundHotel.setName(newName)
-    foundHotel.setNumberOfRooms(newNumberOfRooms)
-    foundHotel.setNumberOfFloors(newNumberOfFloors)
-    foundHotel.setTotalArea(newTotalArea)
-
     document.getElementById("updateHotelDiv").hidden = true;
-    document.getElementById("modificationsDiv").hidden = true;
     document.getElementById("hotelNotFoundMessage").hidden = true;
-    document.getElementById("hotelUpdatedMessage").hidden = false;
-    document.getElementById("hotelUpdatedMessage").innerHTML = `${userHotel} was successfully Updated ✔`;
+    document.getElementById("modificationsDiv").hidden = false;
+
+    document.getElementById("newName").value = "";
+    document.getElementById("newNumberOfRooms").value = "";
+    document.getElementById("newNumberOfFloors").value = "";
+    document.getElementById("newTotalArea").value = "";
+
+    //() => modifyHotel(foundHotel)
 
     console.log(foundHotel)  
 
 }
 
-/* function modifyHotel() {
+function modifyHotel() {
     const newName = document.getElementById("newName").value;
     const newNumberOfRooms = document.getElementById("newNumberOfRooms").value;
     const newNumberOfFloors = document.getElementById("newNumberOfFloors").value;
@@ -208,7 +201,9 @@ function updateHotel() {
     //console.log(foundHotel)
 
     document.getElementById("modificationsDiv").hidden=true
-} */
+    document.getElementById("hotelUpdatedMessage").hidden = false;
+    document.getElementById("hotelUpdatedMessage").innerHTML = `${userHotel} was successfully Updated ✔`;
+}
 
 function formatToString() {
     const formatedHotels = listOfHotels.map((hotel) => {
