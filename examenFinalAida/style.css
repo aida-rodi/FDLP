@@ -1,0 +1,25 @@
+body { 
+    margin: 0 auto; 
+    width:80%; 
+    font-family: 'Segoe UI', 'Open sans', Geneva, Verdana, sans-serif;
+}
+
+#container {
+    padding: 0.5em 2em 0.5em 2em;
+}
+
+.pregunta {
+    color:rgba(24, 24, 122, 0.876);
+}
+
+.respuesta {
+    color:rgb(161, 13, 13);
+}
+
+.noSpace {
+    margin:0;
+}
+
+em {
+    color: red;
+}
