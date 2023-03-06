@@ -13,5 +13,5 @@ export function addNewPuppy() {
 
     const puppy = new Puppy(tipoMascota, raza, origen, alturaCm, pesoKg, pelo, colores, caracter, esperanzaVida)
 
-    document.getElementById("puppy").innerHTML = puppy.toString()
+    document.getElementById("puppy").innerHTML = puppy
 }
